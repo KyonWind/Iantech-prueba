@@ -1,0 +1,56 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Futura Bk BT", sans-serif;
+
+}
+.list-container{
+  display: flex;
+  flex-direction: column;
+}
+.list-title{
+  background: rgba( 255, 255, 255, 1);
+  padding: 25px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  color: rgba(64, 91, 106, 1);
+  width: 100%;
+}
+.list-title img {
+  margin-bottom: 15px;
+}
+.list-form{
+  background: rgba( 50, 192, 202, 1);
+  display: flex;
+  width: 100%;
+}
+.list-form form{
+  display: flex;
+  justify-content: space-evenly;
+}
+.list-form form select{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 25px 0 25px;
+  border: 0;
+  padding: 10px;
+  background: rgba(230, 230 ,230, 1);
+}
+.list-form button{
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+}
+.list-table{
+  display: flex;
+  margin-top: 25px;
+}
+.list-table th{
+  padding: 10px;
+  background: rgba(230,230,230, 1);
+}
+.list-table td{
+  padding: 10px;
+  background: rgba(200,200,200, 1);
+
+}

@@ -1,0 +1,44 @@
+<section class="list-container">
+  <div class="list-title">
+  <img alt="logo" src="../assets/Images/logo.png">
+<h1>PRUEBA IANTECH</h1>
+  </div>
+<div class="list-form">
+<form [formGroup]="form">
+  <select formControlName="selectedProduct">
+    <option [ngValue]="null">Product Filter</option>
+    <option *ngFor="let product of getProductList()" [ngValue]="product">{{product.product}}</option>
+  </select>
+
+  <select formControlName="selectedCategory">
+    <option [ngValue]="null">Category Filter</option>
+    <option *ngFor="let category of getCategoryList()" [ngValue]="category">{{category}}</option>
+  </select>
+
+  <select formControlName="selectedStore">
+    <option [ngValue]="null">Store Filter</option>
+    <option *ngFor="let store of getStoreList()" [ngValue]="store">{{store}}</option>
+  </select>
+
+  <button type="submit">Enviar</button>
+</form>
+</div>
+
+  <div class="list-table">
+
+<table>
+  <thead>
+    <th>Product</th>
+    <th>Category</th>
+    <th>Stores</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of getProductListToShow()">
+      <td>{{ item.product }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.store.join(', ') }}</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</section>
